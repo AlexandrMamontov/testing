@@ -24,33 +24,22 @@ body {
 
 .trusting {
     overflow: hidden;
-    height: 100vh;
 }
 
 .trusting__container {
     margin: 0 auto;
     padding: 0 35px;
     position: relative;
-    height: 100%;
-    max-width: 1920px;
+    min-height: 860px;
+    max-width: 1400px;
+    display: flex;
+    align-items: flex-start;
 }
 
 .trusting__content {
     position: relative;
     padding-top: 120px;
     overflow: hidden;
-    height: 100%;
-}
-
-.trusting__block {
-    width: 800px;
-    height: 2000px;
-    background-color: #fff;
-    position: absolute;
-    top: -200px;
-    right: 950px;
-    transform: rotate(14deg);
-    z-index: 1;
 }
 
 .trusting__title {
@@ -111,46 +100,24 @@ body {
 }
 
 .trusting__img {
+    width: 860px;
     position: absolute;
-    top: 0;
     right: 0;
 }
 
-@media screen and (max-width: 1630px) {
-    .trusting__block {
-        right: 800px;
+@media screen and (max-width: 1366px) {
+    .trusting__img  {
+        padding-top: 80px;
+        width: 700px;
     }
 }
 
-@media screen and (max-width: 1500px) {
-    .trusting__block {
-        right: 700px;
-    }
-}
-
-@media screen and (max-width: 1400px) {
-    .trusting__title {
-        width: min-content;
-    }
-
-    .trusting__content {
-        padding-top: 100px;
-    }
-
-    .trusting__text {
-        max-width: 400px;
-    }
-}
-
-@media screen and (max-width: 1280px) {
-    .trusting {
-        height: unset;
-    }
-
+@media screen and (max-width: 1220px) {
     .trusting__container {
         display: flex;
         flex-direction: column;
         align-items: center;
+        min-height: unset;
     }
 
     .trusting__content {
@@ -158,12 +125,10 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: unset;
     }
 
     .trusting__title {
         text-align: center;
-        width: 100%;
     }
 
     .trusting__text,
@@ -172,18 +137,14 @@ body {
         text-align: center;
     }
 
-    .trusting__block {
-        display: none;
-    }
-
     .trusting__numbers {
         align-items: center;
     }
 
     .trusting__img {
-        position: unset;
         width: 100%;
-        margin-top: 50px;
+        padding-top: unset;
+        position: unset;
     }
 }
 
