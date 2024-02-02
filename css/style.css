@@ -24,29 +24,30 @@ body {
 
 .trusting {
     overflow: hidden;
+    height: 100vh;
 }
 
 .trusting__container {
-    max-width: 1130px;
     margin: 0 auto;
     padding: 0 35px;
     position: relative;
+    height: 100%;
 }
 
 .trusting__content {
     position: relative;
     padding-top: 120px;
     overflow: hidden;
-    height: 860px;
+    height: 100%;
 }
 
 .trusting__block {
-    width: 500px;
-    height: 1000px;
+    width: 800px;
+    height: 2000px;
     background-color: #fff;
     position: absolute;
-    top: -110px;
-    left: 270px;
+    top: -200px;
+    right: 950px;
     transform: rotate(14deg);
     z-index: 1;
 }
@@ -88,6 +89,7 @@ body {
 }
 
 .trusting__number-1, .trusting__number-2 {
+    width: min-content;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     font-size: 28px;
@@ -110,21 +112,28 @@ body {
 .trusting__img {
     position: absolute;
     top: 0;
-    right: -350px;
-    width: 860px;
+    right: 0;
 }
 
-@media screen and (max-width: 1770px) {
+@media screen and (max-width: 1630px) {
     .trusting__block {
-        left: 120px;
+        right: 800px;
     }
+}
 
+@media screen and (max-width: 1500px) {
+    .trusting__block {
+        right: 700px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
     .trusting__title {
         width: min-content;
     }
 
-    .trusting__img {
-        right: -200px;
+    .trusting__content {
+        padding-top: 100px;
     }
 
     .trusting__text {
@@ -132,21 +141,11 @@ body {
     }
 }
 
-@media screen and (max-width: 1400px) {
-    .trusting__content {
-        padding-top: 100px;
+@media screen and (max-width: 1280px) {
+    .trusting {
+        height: unset;
     }
 
-    .trusting__img {
-        right: -75px;
-    }
-
-    .trusting__block {
-        left: 90px;
-    }
-}
-
-@media screen and (max-width: 1200px) {
     .trusting__container {
         display: flex;
         flex-direction: column;
@@ -177,7 +176,7 @@ body {
     }
 
     .trusting__numbers {
-        text-align: center;
+        align-items: center;
     }
 
     .trusting__img {
@@ -210,5 +209,16 @@ body {
 @media screen and (max-width: 480px) {
     .trusting__title {
         font-size: 35px;
+    }
+
+    .trusting__number-1,
+    .trusting__number-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .trusting__number-2 span {
+        margin-bottom: 5px;
     }
 }
